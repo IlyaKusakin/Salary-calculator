@@ -39,10 +39,7 @@ python manage.py runserver
 
 
 ## Additionally
-> Short blurb about what your product does.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
+ Introductory [video](https://youtu.be/Xm0kfw-yg5A) and [presentation]( https://drive.google.com/file/d/1-VLs3JRAReuBlLiZ7u0ILyj-_5DNsUeg/view)
 
 ## Screenshots
 1. Main page
