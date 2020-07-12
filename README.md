@@ -37,17 +37,22 @@ python manage.py runserver
 ### Screenshots
 1. Main page
 ![main page](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/FUXgFEWpGw8.jpg)
+
 2.List inquiries
 ![second](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/items.jpg)
+
 3. Page with developers contacts
 ![item](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/contacts.jpg)
+
 4. Dark theme
 ![basket](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/dark.jpg)
+
 5. Authentication
 ![auth](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/auth.jpg)
+
 6. View from mobile device
 ![m1](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/form-m.jpg)
-![m2](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/menu-m.jpg)
+
 
 
 # Product Name
