@@ -6,7 +6,11 @@ Module with functions for vacancies preprocessing
 Author: Kusakin Ilya
 """
 
-
+# import sys
+# sys.path.append(sys.path[0]+'\\api\\util_function')
+# print(sys.path)
+import xgboost
+import os
 import pandas as pd
 import numpy as np
 import pickle
@@ -47,7 +51,8 @@ stopWords = set(stopwords.words('russian'))
 
 
 #Russian embeddings from FastText model
-wv_embeddings = gensim.models.KeyedVectors.load_word2vec_format(fname='model.bin', binary=True)
+wv_embeddings = gensim.models.KeyedVectors.load_word2vec_format(fname=os.getcwd()+'/api/util_function/model.bin', binary=True)
+
 
 #DIY dict with vectorized russian words
 my_embeddings = dict()
@@ -215,7 +220,7 @@ def model_prediction(title, company, employment, schedule, experience, skills, d
         type of employment
     schedule : string
         type of schedule.
-    experience : string
+    experience : int
         Job experience.
     skills : string
         Text witn description of required skills.
@@ -227,10 +232,10 @@ def model_prediction(title, company, employment, schedule, experience, skills, d
     Author: Kusakin Ilya
     """
     #dataframe template
-    df = pd.read_csv("start.csv" , sep=";")
+    df = pd.read_csv(os.getcwd()+'/api/util_function/start.csv' , sep=";")
     
     #preprocessing pipeline
-    df['experience.name'] = int(experience)
+    df['experience.name'] = experience
     df[employment] = 1
     df[schedule] = 1
     df = companys(df)
@@ -241,8 +246,8 @@ def model_prediction(title, company, employment, schedule, experience, skills, d
     
     dataframe_np = np.array(df)
     #uploading model using pickle
-    model =pickle.load(open("model_95sal_full.pickle.dat", "rb"))
+    model =pickle.load(open(os.getcwd()+'/api/util_function/model-full.pickle.dat', "rb"))
     
     #predincting salary value    
     pred_value = model.predict(dataframe_np)
-    return str(int(pred_value[0]))
+    return int(pred_value[0])

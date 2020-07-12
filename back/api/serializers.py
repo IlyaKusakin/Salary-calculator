@@ -6,7 +6,8 @@ from django.utils import timezone
 
 # import folder with util functions
 import sys
-
+sys.path.append(sys.path[0]+'/api/util_function')
+from model_pred import model_prediction
 # sys.path.insert(1, 'util_functions')
 # sys.path.insert(3, '../')
 # from predict import predictor
@@ -27,7 +28,6 @@ class InquiryCreateSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         inquiry = Inquiry()
-        inquiry.result = 50000
         inquiry.title = validated_data['title']
         inquiry.text = validated_data['text']
         inquiry.company = validated_data['company']
@@ -35,9 +35,16 @@ class InquiryCreateSerializer(serializers.ModelSerializer):
         inquiry.worktime = validated_data['worktime']
         inquiry.exp = validated_data['exp']
         inquiry.skills =validated_data['skills']
-        # inquiry.skills =validated_data['skills'].split(', ') для функции
+        inquiry.result = model_prediction(
+                    inquiry.title, 
+                    inquiry.company,
+                    inquiry.employment,
+                    inquiry.worktime,
+                    inquiry.exp,
+                    validated_data['skills'].split(', '),
+                    inquiry.text)
+    
         inquiry.user = validated_data['user']
-
         inquiry.save()
         return inquiry
 

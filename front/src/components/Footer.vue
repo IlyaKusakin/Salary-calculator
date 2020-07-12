@@ -36,7 +36,7 @@
             <v-btn
               class="mx-4 white--text"
               icon
-              href="https://github.com/AlexandrNemashkalo/neural-network-salary-calculator"
+              href="https://github.com/AlexandrNemashkalo/Salary-calculator"
             >
                 <v-icon size="24px">mdi-github</v-icon>
             </v-btn> 

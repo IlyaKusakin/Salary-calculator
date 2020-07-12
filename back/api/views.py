@@ -12,9 +12,9 @@ from django.http import FileResponse
 from django.core.files import File
 
 import sys
-sys.path.append(sys.path[0]+'/api/util_function')
 print(sys.path)
-from model_pred.py import model_prediction
+sys.path.append(sys.path[0]+'/api/util_function')
+from model_pred import model_prediction
 # from predict import predictor
 # from parsing import parser
 
@@ -28,18 +28,40 @@ class InquiryCreateView(APIView):
     permission_classes = ()
 
     def post(self, request, ):
-        title = request.data.get("title")
-        text = request.data.get("text")
-        company = request.data.get("company")
-        employment = request.data.get("employment")
-        worktime = request.data.get("worktime")
-        exp = request.data.get("exp")
-        skills = request.data.get("skills").split(', ')
-        company = request.data.get("company")
+        # title = request.data.get("title")
+        # text = request.data.get("text")
+        # company = request.data.get("company")
+        # employment = request.data.get("employment")
+        # worktime = request.data.get("worktime")
+        # exp = request.data.get("exp")
+        # skills = request.data.get("skills").split(', ')
+        # company = request.data.get("company")
 
+# title : string
+#         title of vacancy
+#     company : string
+#         company title
+#     employment : string
+#         type of employment
+#     schedule : string
+#         type of schedule.
+#     experience : string
+#         Job experience.
+#     skills : string
+#         Text witn description of required skills.
+#     descr : string
+#         vacancy description.
         try:   
             return Response({
-                "result":52300, 
+                "result":model_prediction(
+                    request.data.get("title"), 
+                    request.data.get("company"),
+                    request.data.get("employment"),
+                    request.data.get("worktime"),
+                    request.data.get("exp"),
+                    request.data.get("skills").split(', '),
+                    request.data.get("text")
+                )
                 })
         except:
             return Response({"error": "Wrong Credentials"}, status=status.HTTP_400_BAD_REQUEST)

@@ -7,7 +7,7 @@
                         <div class="row">
                             <div class="col-12 " style="position:relative">
                                 <img src='../assets/icon3.png' style="position:absolute;left:12px" width="46px" />
-                                <span class="pt-3 d-block" style="margin-left:60px;font-size:30px"><b>Нейросетевой калькулятор зарплаты</b></span>
+                                <span class="pt-3 d-block" style="margin-left:60px;font-size:30px"><b>Калькулятор зарплаты</b></span>
                             </div>
                         </div>
                     </div>
