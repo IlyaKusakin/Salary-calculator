@@ -19,7 +19,7 @@ const vuexLocalStorage = new VuexPersist({
 export default new Vuex.Store({
     state: {
         statusDay:false,
-
+        
         user :{
             id:null,
             token:null,
@@ -40,6 +40,7 @@ export default new Vuex.Store({
         setInquiries(state,newTab){
             state.inquiries = newTab;
         },
+       
     },
 
     actions: {
@@ -74,6 +75,7 @@ export default new Vuex.Store({
 
 
         async AddInquiry(state, form){
+            
             let data = {
                 'title' : form.title,
                 'company':form.company,
@@ -105,9 +107,11 @@ export default new Vuex.Store({
             else{
                 var config ={   headers:{Authorization :"Token "+ this.state.user.token}}
                 await axios.post(port +'inquiry/create-auth/',data,config).then(() =>{
-                    this.dispatch('GetInquiries')
+                     this.dispatch('GetInquiries')
+                 
                 }).catch(function(e){alert("Что-то произошло");console.log(e)});  
             }
+     
         },
 
 

@@ -12,11 +12,8 @@ from django.http import FileResponse
 from django.core.files import File
 
 import sys
-print(sys.path)
 sys.path.append(sys.path[0]+'/api/util_function')
 from model_pred import model_prediction
-# from predict import predictor
-# from parsing import parser
 
 
 # Inquiry
@@ -67,7 +64,6 @@ class UserCreate(generics.CreateAPIView):
     authentication_classes = ()
     permission_classes = ()
     serializer_class = UserSerializer
-
 
 
 class LoginView(APIView):

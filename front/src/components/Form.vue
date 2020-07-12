@@ -189,18 +189,12 @@
               ],
               items: [
                 { header: 'Выберите или создайте свой навык' },
-                {
-                  text: 'Исполнительность'
-                },
-                {
-                  text: 'SQL'
-                },
-                {
-                  text: 'Умение работать в команде'
-                },
-                {
-                  text: 'HTML'
-                },
+                {text: 'Исполнительность'},
+                {text: 'Коммуникация'},
+                {text: 'Пользование интернетом'},
+                { text: 'Способность обучаться'},
+                { text: 'Умение вести переписку'},
+                { text: 'Умение работать в команде'}
               ],
               titleRules: [
                   v => !!v || 'Это поле обязательное',
@@ -208,7 +202,6 @@
         
           }
       },
-
       create(){
         this.result=null
       },
@@ -285,17 +278,14 @@
             if(this.$refs.form.validate())
               {
                 this.loading = true
-                this.$refs.form.validate()
-                console.log(form)
-                await sleep(1000)
+                this.$refs.form.validate()          
                 await this.$store.dispatch("AddInquiry",form)
+                await sleep(100)
                 this.loading = false
                 this.result = this.$store.state.inquiries[0].result
-                this.$refs.form.validate()
+                
               }
         },
-
-
       }  
   }
 </script>

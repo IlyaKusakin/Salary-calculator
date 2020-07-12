@@ -4,14 +4,10 @@ from .models import Inquiry
 from django.contrib.auth.models import User
 from django.utils import timezone
 
-# import folder with util functions
 import sys
 sys.path.append(sys.path[0]+'/api/util_function')
 from model_pred import model_prediction
-# sys.path.insert(1, 'util_functions')
-# sys.path.insert(3, '../')
-# from predict import predictor
-# from parsing import parser
+
 
 
 # Inquiry
@@ -53,16 +49,10 @@ class InquiryCreateSerializer(serializers.ModelSerializer):
         fields = "__all__"
        
         
-
-
-
-
-
 class InquiryListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Inquiry
         fields = "__all__"
-
 
 
 

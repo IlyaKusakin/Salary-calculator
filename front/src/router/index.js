@@ -4,7 +4,7 @@ import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Main from '../views/Main.vue'
 import MainPage from '../components/MainPage.vue'
-import About from '../components/About.vue'
+// import About from '../components/About.vue'
 import Contacts from '../components/Contacts.vue'
 
 
@@ -30,10 +30,10 @@ Vue.use(VueRouter)
             path:'',
             component: MainPage
         },
-        {
-            path:'about',
-            component: About,  
-        },
+        // {
+        //     path:'about',
+        //     component: About,  
+        // },
         {
           path:'contacts',
           component: Contacts,  

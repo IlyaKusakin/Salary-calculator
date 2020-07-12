@@ -18,7 +18,7 @@
         <div  style="background-color:rgb(66,66,66)"  >
             <Form></Form>
         </div>
-<!-- style="pointer-events:none" -->
+
         <v-list v-if="this.$store.state.inquiries.length>0" disabled   class="pt-5 ">
             <div class="container CONTAINER pb-0 pt-md-5 "  >
                 <span class="pt-md-3 d-block " id="title" >

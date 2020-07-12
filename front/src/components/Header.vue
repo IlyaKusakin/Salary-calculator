@@ -15,11 +15,11 @@
                             </router-link>
                         </div>
 
-                        <div class="d-inline-block mr-sm-5 ml-sm-5">
+                        <!-- <div class="d-inline-block mr-sm-5 ml-sm-5">
                             <router-link style="text-decoration: none" to="/about">
                                 <v-btn class="px-0  " color="grey darken-3"  depressed large>О Приложении</v-btn>
                             </router-link>
-                        </div>
+                        </div> -->
 
                         <div class="my-2 d-inline-block ml-5">
                             <router-link style="text-decoration: none" to="/contacts">
@@ -81,7 +81,7 @@
         >
             <v-toolbar color="grey darken-3" class="px-5 ">
                 <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-                <v-toolbar-title class="pl-0" style="font-size:16px">Калькулятор зарплаты</v-toolbar-title>
+                <v-toolbar-title class="pl-0" style="font-size:20px">Калькулятор зарплаты</v-toolbar-title>
                 <v-spacer></v-spacer>
             </v-toolbar>
         </v-app-bar>
@@ -115,14 +115,14 @@
                     </v-list-item-content>
                 </v-list-item>
 
-                <v-list-item    @click="change('/about')" link> 
+                <!-- <v-list-item    @click="change('/about')" link> 
                     <v-list-item-action>   
                         <v-icon >mdi-information-outline</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>    
                         <v-list-item-title>О приложении</v-list-item-title> 
                     </v-list-item-content>     
-                </v-list-item>
+                </v-list-item> -->
 
 
                 <v-list-item @click="change('/contacts')" link> 
