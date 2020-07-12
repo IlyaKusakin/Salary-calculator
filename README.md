@@ -34,7 +34,18 @@ In `back`
 python manage.py runserver
 ```
 
+
+
+
+
+## Additionally
+> Short blurb about what your product does.
+
+_For more examples and usage, please refer to the [Wiki][wiki]._
+
+
 ### Screenshots
+
 1. Main page
 
 ![main page](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/main.jpg)
@@ -60,14 +71,3 @@ python manage.py runserver
 ![m1](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/form-m.jpg)
 ![m1](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/menu-m.jpg)
 
-
-
-# Product Name
-> Short blurb about what your product does.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-
-
-
-'hack_model.ipynb' - ноутбук с функциями предобработки данных и обучения модели
