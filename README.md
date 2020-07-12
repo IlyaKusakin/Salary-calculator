@@ -37,7 +37,7 @@ python manage.py runserver
 ### Screenshots
 1. Main page
 
-![main page](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/FUXgFEWpGw8.jpg)
+![main page](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/main.jpg)
 
 2.List inquiries
 
@@ -58,6 +58,7 @@ python manage.py runserver
 6. View from mobile device
 
 ![m1](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/form-m.jpg)
+![m1](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/menu-m.jpg)
 
 
 
