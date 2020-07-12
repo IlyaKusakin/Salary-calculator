@@ -48,9 +48,11 @@ python manage.py runserver
 ![basket](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/dark.jpg)
 
 5. Authentication
+
 ![auth](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/auth.jpg)
 
 6. View from mobile device
+
 ![m1](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/form-m.jpg)
 
 
