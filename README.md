@@ -2,7 +2,7 @@
 Проект веб-приложения для калькуляции зарплаты по описанию вакансии.
 
 ## Installation
-Windows:
+Windows: 
 in `front/`
 ```sh
 npm install
