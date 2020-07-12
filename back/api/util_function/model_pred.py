@@ -6,7 +6,7 @@ Module with functions for vacancies preprocessing
 Author: Kusakin Ilya
 """
 
-import xgboost as xgb
+
 import pandas as pd
 import numpy as np
 import pickle
@@ -32,6 +32,7 @@ stemmer = SnowballStemmer("russian")
 import gensim
 import re
 import nltk
+nltk.download('stopwords')
 
 #import text tokenizer
 from nltk.tokenize import WordPunctTokenizer
