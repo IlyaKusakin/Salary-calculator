@@ -12,7 +12,7 @@ from django.http import FileResponse
 from django.core.files import File
 
 import sys
-sys.path.append(sys.path[0]+'\\api\\util_function')
+sys.path.append(sys.path[0]+'/api/util_function')
 print(sys.path)
 from model_pred.py import model_prediction
 # from predict import predictor
