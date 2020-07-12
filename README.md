@@ -44,8 +44,7 @@ python manage.py runserver
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
 
-### Screenshots
-
+## Screenshots
 1. Main page
 
 ![main page](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/main.jpg)
