@@ -23,7 +23,7 @@ In `front`
 npm install
 ```
 
-##Run in development mode
+## Run in development mode
 In `front`
 ```
 npm run serve
