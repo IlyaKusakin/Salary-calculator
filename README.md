@@ -1,8 +1,3 @@
 # Salary-calculator
-pip install pandas
-pip install numpy
-pip install pickle
-pip install pymorphy2
-pip install gensim
-pip install re
-pip install nltk
+Проект веб-приложения для калькуляции зарплаты по описанию вакансии.
+'hack_model.ipynb' - ноутбук с функиями предобработки данных и обучения модели
