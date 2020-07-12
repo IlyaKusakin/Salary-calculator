@@ -28,29 +28,6 @@ class InquiryCreateView(APIView):
     permission_classes = ()
 
     def post(self, request, ):
-        # title = request.data.get("title")
-        # text = request.data.get("text")
-        # company = request.data.get("company")
-        # employment = request.data.get("employment")
-        # worktime = request.data.get("worktime")
-        # exp = request.data.get("exp")
-        # skills = request.data.get("skills").split(', ')
-        # company = request.data.get("company")
-
-# title : string
-#         title of vacancy
-#     company : string
-#         company title
-#     employment : string
-#         type of employment
-#     schedule : string
-#         type of schedule.
-#     experience : string
-#         Job experience.
-#     skills : string
-#         Text witn description of required skills.
-#     descr : string
-#         vacancy description.
         try:   
             return Response({
                 "result":model_prediction(
@@ -59,7 +36,7 @@ class InquiryCreateView(APIView):
                     request.data.get("employment"),
                     request.data.get("worktime"),
                     request.data.get("exp"),
-                    request.data.get("skills").split(', '),
+                    request.data.get("skills"),
                     request.data.get("text")
                 )
                 })

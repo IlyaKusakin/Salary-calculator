@@ -6,9 +6,8 @@ Module with functions for vacancies preprocessing
 Author: Kusakin Ilya
 """
 
-# import sys
-# sys.path.append(sys.path[0]+'\\api\\util_function')
-# print(sys.path)
+from joblib import dump
+from joblib import load
 import xgboost
 import os
 import pandas as pd
@@ -51,14 +50,16 @@ stopWords = set(stopwords.words('russian'))
 
 
 #Russian embeddings from FastText model
-wv_embeddings = gensim.models.KeyedVectors.load_word2vec_format(fname=os.getcwd()+'/api/util_function/model.bin', binary=True)
+# wv_embeddings = gensim.models.KeyedVectors.load_word2vec_format(fname=os.getcwd()+'/api/util_function/model.bin', binary=True)
 
 
 #DIY dict with vectorized russian words
-my_embeddings = dict()
-for i in wv_embeddings.vocab:
-  without_ = re.sub('_\w+', '', i)
-  my_embeddings[without_]=wv_embeddings[i]
+# my_embeddings = dict()
+# for i in wv_embeddings.vocab:
+  # without_ = re.sub('_\w+', '', i)
+  # my_embeddings[without_]=wv_embeddings[i]
+with open(os.getcwd()+'/api/util_function/FastText_dict.pickle', 'rb') as handle:
+  my_embeddings = pickle.load(handle)
 
 
 def skills_important(dataframe):
@@ -246,7 +247,7 @@ def model_prediction(title, company, employment, schedule, experience, skills, d
     
     dataframe_np = np.array(df)
     #uploading model using pickle
-    model =pickle.load(open(os.getcwd()+'/api/util_function/model-full.pickle.dat', "rb"))
+    model = load(os.getcwd()+'/api/util_function/model_full.joblib.dat')
     
     #predincting salary value    
     pred_value = model.predict(dataframe_np)

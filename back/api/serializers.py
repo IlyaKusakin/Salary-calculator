@@ -41,7 +41,7 @@ class InquiryCreateSerializer(serializers.ModelSerializer):
                     inquiry.employment,
                     inquiry.worktime,
                     inquiry.exp,
-                    validated_data['skills'].split(', '),
+                    inquiry.skills,
                     inquiry.text)
     
         inquiry.user = validated_data['user']
