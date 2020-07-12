@@ -1,26 +1,53 @@
 # Salary-calculator
 Проект веб-приложения для калькуляции зарплаты по описанию вакансии.
 
-## Installation
+## Library installation
 Windows: 
 
-in `front/`
+For python3:
+```sh
+pip install Django
+pip install djoser
+pip install djangorestframework
+pip install django-cors-headers
+pip install pandas
+pip install numpy
+pip install pickle5
+pip install pymorphy2
+pip install gensim
+pip install nltk
+pip install xgboostcd==0.90 scikit-learn 
+```
+In `front`
 ```sh
 npm install
 ```
+
+##Run in development mode
+In `front`
+```
+npm run serve
+```
+
+In `back`
+```
+python manage.py runserver
+```
+
 ### Screenshots
 1. Main page
 ![main page](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/FUXgFEWpGw8.jpg)
-2. Second page
-![second](https://github.com/AlexandrNemashkalo/course-work-shop/blob/master/Images/second.png)
-3. Page with item
-![item](https://github.com/AlexandrNemashkalo/course-work-shop/blob/master/Images/item.png)
-4. Shopping basket
-![basket](https://github.com/AlexandrNemashkalo/course-work-shop/blob/master/Images/trash.png)
+2.List inquiries
+![second](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/items.jpg)
+3. Page with developers contacts
+![item](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/contacts.jpg)
+4. Dark theme
+![basket](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/dark.jpg)
 5. Authentication
-![auth](https://github.com/AlexandrNemashkalo/course-work-shop/blob/master/Images/login.png)
-5. Modal window
-![modal](https://github.com/AlexandrNemashkalo/course-work-shop/blob/master/Images/model-window.png)
+![auth](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/auth.jpg)
+6. View from mobile device
+![m1](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/form-m.jpg)
+![m2](https://github.com/AlexandrNemashkalo/Salary-calculator/blob/master/screenshots/menu-m.jpg)
 
 
 # Product Name
