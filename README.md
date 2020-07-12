@@ -1,1 +1,1 @@
-# neural-network-salary-calculator
+# Salary-calculator
