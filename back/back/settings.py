@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:100906d4acb03223bb022628596ba56f20304872f8524eb2b5b2cc9c2cefa26b
-size 3782
-=======
+
 """
 Django settings for back project.
 
@@ -149,4 +145,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
+

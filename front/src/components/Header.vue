@@ -39,21 +39,13 @@
                     </div>
 
 
-<<<<<<< HEAD
                     <div class="col-4 text-right pl-0 pr-0">
-=======
-                    <div class="col-4 text-right pl-0">
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
 
                         <router-link
                           v-if="this.$store.state.user.token == null"
                           style="text-decoration: none" to="/login"
                         >
-<<<<<<< HEAD
                             <v-btn class="mt-4 " color="grey darken-3"  depressed  large>
-=======
-                            <v-btn class="px-0 mt-4 mr-4   " color="grey darken-3"  depressed  large>
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
                                 Вход
                             </v-btn>
                         </router-link>
@@ -61,11 +53,7 @@
 
                         <v-list-item
                           v-if="this.$store.state.user.token != null"
-<<<<<<< HEAD
                           two-line class=" mt-1 pr-3 pl-0"
-=======
-                          two-line class=" mt-1 pr-5 pl-0"
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
                         >
                             <v-list-item-content>
                                 <v-list-item-title>{{this.$store.state.user.name}}</v-list-item-title>

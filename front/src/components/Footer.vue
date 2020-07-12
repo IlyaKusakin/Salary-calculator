@@ -1,9 +1,5 @@
 <template>
     <v-footer
-<<<<<<< HEAD
-
-=======
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
       dark
       padless
       color="grey darken-3"
@@ -13,14 +9,9 @@
             <v-btn
               class="mx-4 white--text"
               icon
-<<<<<<< HEAD
               href="https://xn--80aaap2atgrpcmp.xn--p1ai/#rec200612850"
             >
                 <v-icon size="24px">mdi-alpha-t-circle</v-icon>
-=======
-            >
-                <v-icon size="24px">mdi-google-drive</v-icon>
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
             </v-btn> 
 
             <div class="d-inline-block pl-5 ml-1 pt-5 pb-5">
@@ -45,10 +36,7 @@
             <v-btn
               class="mx-4 white--text"
               icon
-<<<<<<< HEAD
               href="https://github.com/AlexandrNemashkalo/neural-network-salary-calculator"
-=======
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
             >
                 <v-icon size="24px">mdi-github</v-icon>
             </v-btn> 

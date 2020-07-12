@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
             <v-form ref="form"    
               v-model="valid"
               lazy-validation 
@@ -141,143 +140,10 @@
                               <span style="position:absolute;right:0;" id="cost" > <b>{{this.result==null ? "":this.result + ' руб.' }}</b></span>
                           </div>
 
-=======
-    <v-content>
-        <v-list disabled class="pt-5 d-none d-md-block">
-            <v-list-item-group   >
-                <v-list-item>
-                    <div class="container CONTAINER  " >
-                        <div class="row">
-                            <div class="col-12 " style="position:relative">
-                                <img src='../assets/icon3.png' style="position:absolute;left:12px" width="46px" />
-                                <span class="pt-3 d-block" style="margin-left:60px;font-size:30px"><b>Нейросетевой калькулятор зарплаты</b></span>
-                            </div>
-                        </div>
-                    </div>
-                </v-list-item>
-            </v-list-item-group>
-        </v-list>
-
-        <div  style="background-color:rgb(66,66,66)" class="mb-1" >
-
-            <v-form ref="form" >
-                <div class="container CONTAINER " >
-                    <div class="row">
-                        <div class="col-md-8 col-12 pt-5 pb-0 pb-md-2  " style="position:relative">
-                    
-                            <v-text-field
-                            v-model="title"
-                            style=" border-radius: 15px 15px 0 0;"
-                            class="pt-5"
-                            light
-                            required
-                            background-color="white"
-                            label="Название вакансии"
-                            filled
-                            ></v-text-field>
-    
-                            <v-btn 
-                              color="secondary" 
-                              @click="FileInput()"  
-                              style="position:absolute;top:100px;right:12px;border-radius: 15px 0 0 15px ;"  
-                              x-small dark
-                            >
-                                <input type="file" id="fileInput" @change="ReadFiles($event)" class="btn d-none btn-info mb-1 btn-sm"/>
-                                загрузить текстовый файл
-                            </v-btn> 
-            
-  
-                            <v-textarea
-                              light
-                              v-model="text"
-                              filled
-                              solo
-                              required
-                              style=" border-radius: 0 0 15px 15px "
-                              height="250px"
-                              background-color="white"
-                              name="input-7-4"
-                              label="Подробное описание вакансии"
-                            ></v-textarea>
-                        </div>
-
-                        <div style="position:relative" class="col-md-4 d-inline-block d-md-block pt-md-5 pt-0 pl-md-5 ">
-                            <div style="height:50px" class=" my-md-2 pt-md-3 pl-md-5">
-                                <v-btn
-                                  color="grey darken-1 mb-1" 
-                                  id="mybtn"  
-                                  :disabled="!valid"  
-                                  @click="validate" 
-                                  dark 
-                                  x-large
-                                  :loading="loading"
-                                  >Рассчитать <br> зарплату
-                                </v-btn>
-                            </div>
-                            <span class="d-md-block  mt-md-5 pt-md-4 pl-md-5" id="cost"> <b>{{this.result==null ? "":this.result + ' руб.' }}</b></span>
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
                         </div>
                     </div>
                 </div>
             </v-form>
-<<<<<<< HEAD
-=======
-        </div>
-
-        <v-list v-if="this.$store.state.inquiries.length>0"  style="pointer-events:none"  class="pt-5 ">
-            <div class="container CONTAINER pb-0 pt-md-5 "  >
-                <span class="pt-md-3 d-block " id="title" >
-                    <b>Результаты ваших подсчетов:</b>
-                </span>
-            </div>
-            <v-list-item-group>
-                <div  v-for="(item, i) in this.$store.state.inquiries.slice((this.page-1)*5,this.page*5)"
-                  :key="i" 
-                >
-                    <v-list-item class="position:relative px-0 py-0">
-                        <div class="container CONTAINER py-0 ">
-                            <v-list-item-content class="py-0"> 
-                                <div class="row " style="position:relative" >
-                                    <div class="col-md-8 col-12 p-0">
-                                        <div>
-                                            <p class="font-weight-bold titleWork" >{{item.title}}</p>
-                                        </div>
-                                        
-                                        <span class="d-block font-weight-regular textWork" >{{item.text}}</span> 
-                                        <br>
-                                        
-                                        <div>
-                                            <a @click="Delete(item.id)" style="pointer-events:auto" class="d-block-inline  ">удалить</a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-4 text-center py-0">
-                                        <span  class="listCost ">{{item.result}} руб.</span>
-                                    </div>
-                                </div>
-                            </v-list-item-content>
-                        </div>
-                    </v-list-item>
-                    <div class="container CONTAINER py-3 m-0 ">
-                        <v-divider></v-divider>
-                    </div>
-                </div>        
-            </v-list-item-group>
-        </v-list>
-
-        <v-list v-if="this.$store.state.inquiries.length>0" class="pt-5 pb-5">
-            <div class="text-center">
-                <v-pagination
-                  color="grey darken-3"
-                  v-model="page"
-                  :length="Math.floor(this.$store.state.inquiries.length/5 == parseInt(this.$store.state.inquiries.length/5)?
-                      this.$store.state.inquiries.length/5: this.$store.state.inquiries.length/5 +1)"
-                  total-visible="7"
-                ></v-pagination>
-            </div>
-        </v-list>
-    </v-content>
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
 </template>
 
 
@@ -416,7 +282,6 @@
                 skills:list,
                 text: this.text
             }
-<<<<<<< HEAD
             if(this.$refs.form.validate())
               {
                 this.loading = true
@@ -431,48 +296,6 @@
         },
 
 
-=======
-            this.loading = true
-            await sleep(1000)
-            await this.$store.dispatch("AddInquiry",form)
-            this.loading = false
-            this.result = this.$store.state.inquiries[0].result
-            this.$refs.form.validate()
-        },
-
-        Delete(id){
-            swal({
-                  title: "Вы точно хотите удалить данную запись?",
-                  text: "После удаления ее нельзя будет никак возобновить!",
-                  icon: "warning",
-                  buttons: true,
-                  dangerMode: true,
-                
-            }).then((willDelete) => {
-                if (willDelete) {
-                  this.$store.dispatch('DeleteInquiry',id)
-                    swal("Запись была успешно удалена", {
-                        icon: "success",
-                        button: "Ок",
-                    });
-                } else {
-                      swal("Ваша запись сохранена");
-                }
-            });
-        },
-
-        async LogOut(){
-            await this.$store.dispatch('LogOut')
-        },
-
-        Day(){
-            this.$vuetify.theme.dark = !this.$vuetify.theme.dark
-        },
-
-        change(){
-            this.$store.dispatch("Change",this.$store.state.tab)
-        }
->>>>>>> a0d2f18c6b2ce3687c6117f748e7934af5a95790
       }  
   }
 </script>
