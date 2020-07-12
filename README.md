@@ -3,6 +3,7 @@
 
 ## Installation
 Windows: 
+
 in `front/`
 ```sh
 npm install
