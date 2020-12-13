@@ -1,7 +1,7 @@
 # Salary-calculator
 Проект веб-приложения для калькуляции зарплаты по описанию вакансии.
 
-[Ноутбук с моделью]
+[Ноутбук с моделью](https://colab.research.google.com/drive/1hdh5IENpUsgT3RbxpAiCPzto3_6J6WWu?usp=sharing)
 
 ## Library installation
 Windows: 
